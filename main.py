@@ -18,7 +18,7 @@ def reader_matrix(number):
     return matrix
 
 
-if name == 'main':
+if __name__ == '__main__':
      with Pool(processes=4) as pool:
           matrix = pool.starmap(multiplication, [(i, k) for i in reader_matrix(1) for k in zip(*reader_matrix(2))])
           write(matrix)
